@@ -32,7 +32,8 @@ public class RegionCommandEvent extends Event {
 		this.args = args;
 	}
 
-    public HandlerList getHandlers() {
+    @Override
+	public HandlerList getHandlers() {
         return handlers;
     }
      

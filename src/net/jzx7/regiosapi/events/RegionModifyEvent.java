@@ -20,7 +20,8 @@ public class RegionModifyEvent extends Event {
         this.region = genericRegion;
     }
 
-    public HandlerList getHandlers() {
+    @Override
+	public HandlerList getHandlers() {
         return handlers;
     }
      

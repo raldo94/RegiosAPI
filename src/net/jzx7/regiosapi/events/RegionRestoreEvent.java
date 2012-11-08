@@ -35,7 +35,8 @@ public class RegionRestoreEvent extends Event {
         this.backupname = backupname;
     }
 
-    public HandlerList getHandlers() {
+    @Override
+	public HandlerList getHandlers() {
         return handlers;
     }
      

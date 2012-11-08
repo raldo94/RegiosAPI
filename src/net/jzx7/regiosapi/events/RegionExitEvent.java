@@ -28,7 +28,8 @@ public class RegionExitEvent extends Event {
         this.region = region;
     }
 
-    public HandlerList getHandlers() {
+    @Override
+	public HandlerList getHandlers() {
         return handlers;
     }
      

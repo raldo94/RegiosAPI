@@ -28,7 +28,8 @@ public class RegionLightningStrikeEvent extends Event {
         this.region = r;
     }
 
-    public HandlerList getHandlers() {
+    @Override
+	public HandlerList getHandlers() {
         return handlers;
     }
      
