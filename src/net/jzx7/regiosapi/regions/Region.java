@@ -15,10 +15,8 @@ import org.bukkit.inventory.PlayerInventory;
 
 public interface Region {
 
-	public void setBiome(Biome biome, Player p);
-	
 	public void addException(String exception);
-
+	
 	public void addExceptionNode(String node);
 
 	public void addItemException(int id);
@@ -31,33 +29,21 @@ public interface Region {
 
 	public boolean areDoorsLocked();
 
-	public boolean canBypassProtection(Player p);
-
-	public boolean canModify(Player p);
-
 	public boolean canBuild(Player p);
 
-	public boolean canPlaceItem(Player p, Material m);
+	public boolean canBypassProtection(Player p);
 
 	public boolean canEnter(Player p);
 
 	public boolean canExit(Player p);
 
-	public GameMode getGameMode();
-
-	public void setGameMode(GameMode gm);
-
-	public void setChangeGameMode(boolean val);
-
-	public boolean isChangeGameMode();
-
-	public void setBlockEndermanMod(boolean val);
-
-	public boolean isBlockEndermanMod();
-
 	public boolean canMobsSpawn();
 
+	public boolean canModify(Player p);
+
 	public boolean canMonstersSpawn();
+
+	public boolean canPlaceItem(Player p, Material m);
 
 	public HashMap<String, Boolean> getAuthentication();
 
@@ -78,6 +64,8 @@ public interface Region {
 	public ArrayList<String> getExceptionNodes();
 
 	public ArrayList<String> getExceptions();
+
+	public GameMode getGameMode();
 
 	public int getHealthRegen();
 
@@ -105,25 +93,13 @@ public interface Region {
 
 	public String getPassword();
 
-	public String[] getPermAddNodes();
-
-	public String[] getPermRemoveNodes();
-
 	public String[] getPermAddGroups();
+
+	public String[] getPermAddNodes();
 
 	public String[] getPermRemoveGroups();
 
-	public String[] getTempAddGroups();
-
-	public String[] getTempRemoveGroups();
-
-	public void setPermAddGroups(String[] val);
-
-	public void setPermRemoveGroups(String[] val);
-
-	public void setTempAddGroups(String[] val);
-
-	public void setTempRemoveGroups(String[] val);
+	public String[] getPermRemoveNodes();
 
 	public int getPlayerCap();
 
@@ -157,9 +133,15 @@ public interface Region {
 
 	public String[] getSubOwners();
 
+	public String[] getTempAddGroups();
+
 	public String[] getTempNodesCacheAdd();
 
 	public String[] getTempNodesCacheRem();
+
+	public String[] getTempRemoveGroups();
+
+	public long getTimestamp(Player p);
 
 	public HashMap<String, Long> getTimeStamps();
 
@@ -179,7 +161,13 @@ public interface Region {
 
 	public boolean isAuthenticated(Player p);
 
+	public boolean isBlockEndermanMod();
+
 	public boolean isBlockForm();
+
+	public boolean isChangeGameMode();
+
+	public boolean isExplosionsEnabled();
 
 	public boolean isFireProtection();
 
@@ -190,6 +178,8 @@ public interface Region {
 	public boolean isForSale();
 
 	public boolean isHealthEnabled();
+
+	public boolean isLeaveMessageSent(Player p);
 
 	public boolean isPasswordEnabled();
 
@@ -228,19 +218,17 @@ public interface Region {
 	public boolean isSpoutLeaveEnabled();
 
 	public boolean isSpoutWelcomeEnabled();
-
-	public boolean isExplosionsEnabled();
-
+	
 	public boolean isUseSpoutTexturePack();
+
+	public boolean isWelcomeMessageSent(Player p);
 
 	public boolean isWipeAndCacheOnEnter();
 
 	public boolean isWipeAndCacheOnExit();
 
-	public String liveFormat(String original, Player p);
-
 	public void removeException(String exception);
-
+	
 	public void removeExceptionNode(String node);
 
 	public void removeItemException(int id);
@@ -248,16 +236,6 @@ public interface Region {
 	public void removePlayer(Player p);
 
 	public void resetAuthentication(Player p);
-
-	public void sendBuildMessage(Player p);
-
-	public void sendLeaveMessage(Player p);
-
-	public void sendPreventEntryMessage(Player p);
-
-	public void sendPreventExitMessage(Player p);
-
-	public void sendWelcomeMessage(Player p);
 
 	public void set_protection(boolean _protection);
 
@@ -267,7 +245,13 @@ public interface Region {
 
 	public void setAuthentication(HashMap<String, Boolean> authentication);
 
+	public void setBiome(Biome biome, Player p);
+
+	public void setBlockEndermanMod(boolean val);
+
 	public void setBlockForm(boolean blockForm);
+
+	public void setChangeGameMode(boolean val);
 
 	public void setChestsLocked(boolean chestsLocked);
 
@@ -275,9 +259,13 @@ public interface Region {
 
 	public void setCustomSoundUrl(String[] customSoundUrl);
 
+	public void setDispensersLocked(boolean dispensersLocked);
+
 	public void setDoorsLocked(boolean doorsLocked);
 
 	public void setExceptions(ArrayList<String> exceptions);
+
+	public void setExplosionsEnabled(boolean explosionsEnabled);
 
 	public void setFireProtection(boolean fireProtection);
 
@@ -286,6 +274,8 @@ public interface Region {
 	public void setForceCommand(boolean forceCommand);
 
 	public void setForSale(boolean forSale);
+
+	public void setGameMode(GameMode gm);
 
 	public void setHealthEnabled(boolean healthEnabled);
 
@@ -317,9 +307,13 @@ public interface Region {
 
 	public void setPasswordEnabled(boolean passwordEnabled);
 
+	public void setPermAddGroups(String[] val);
+
 	public void setPermanentNodesCacheAdd(String[] permanentNodesCacheAdd);
 
 	public void setPermanentNodesCacheRemove(String[] permanentNodesCacheRemove);
+
+	public void setPermRemoveGroups(String[] val);
 
 	public void setPermWipeOnEnter(boolean permWipeOnEnter);
 
@@ -381,15 +375,17 @@ public interface Region {
 
 	public void setSubOwners(String[] subOwners);
 
-	public void setTempNodesCacheAdd(String[] temporaryNodesCacheAdd);
+	public void setTempAddGroups(String[] val);
 
+	public void setTempNodesCacheAdd(String[] temporaryNodesCacheAdd);
+	
 	public void setTempNodesCacheRem(String[] temporaryNodesCacheRem);
+	
+	public void setTempRemoveGroups(String[] val);
 
 	public void setTimestamp(Player p);
 
 	public void setTimeStamps(HashMap<String, Long> timeStamps);
-
-	public void setExplosionsEnabled(boolean explosionsEnabled);
 
 	public void setUseSpoutTexturePack(boolean useSpoutTexturePack);
 
@@ -406,8 +402,5 @@ public interface Region {
 	public void setWipeAndCacheOnExit(boolean wipeAndCacheOnExit);
 
 	public void setWorld(World world);
-
-	public void setDispensersLocked(boolean dispensersLocked);
-
-	public String colourFormat(String message);
+	
 }

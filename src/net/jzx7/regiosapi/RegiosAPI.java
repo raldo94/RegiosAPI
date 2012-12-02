@@ -144,7 +144,7 @@ public interface RegiosAPI {
 	 * @param backupName
 	 *            Backup name.
 	 */
-	public void backupRegion(Region r, String backupName);
+	public void backupRegion(Region r, String backupName, Player p);
 
 	/**
 	 * Restore a Region to its previous state when backed up.
@@ -153,11 +153,13 @@ public interface RegiosAPI {
 	 *            Region.
 	 * @param backupName
 	 *            Backup Name.
+	 * @param p
+	 *            Player
 	 * @throws RegionExistanceException
 	 * @throws FileExistanceException
 	 * @throws InvalidNBTFormatException
 	 */
-	public boolean loadBackup(Region r, String backupName) throws RegionExistanceException, FileExistanceException, InvalidNBTFormat;
+	public boolean loadBackup(Region r, String backupName, Player p) throws RegionExistanceException, FileExistanceException, InvalidNBTFormat;
 
 	/**
 	 * Create a blueprint file.
@@ -168,16 +170,46 @@ public interface RegiosAPI {
 	 *            Point 1.
 	 * @param l2
 	 *            Point 2.
+	 * @param p
+	 *            Player
 	 */
-	public void saveBlueprint(String name, Location l1, Location l2);
+	public void saveBlueprint(String name, Location l1, Location l2, Player p);
 
 	/**
 	 * Loads a blueprint.
 	 * 
 	 * @param name
 	 *            The name of the blueprint.
+	 * @param p
+	 *            Player
 	 * @param pasteLocation
 	 *            The location to begin the paste.
 	 */
-	public boolean loadBlueprint(String name, Location pasteLocation);
+	public boolean loadBlueprint(String name, Player p, Location pasteLocation);
+	
+	/**
+	 * Create a blueprint file.
+	 * 
+	 * @param name
+	 *            Name of the file.
+	 * @param l1
+	 *            Point 1.
+	 * @param l2
+	 *            Point 2.
+	 * @param p
+	 *            Player
+	 */
+	public void saveSchematic(String name, Location l1, Location l2, Player p);
+
+	/**
+	 * Loads a blueprint.
+	 * 
+	 * @param name
+	 *            The name of the blueprint.
+	 * @param p
+	 *            Player
+	 * @param pasteLocation
+	 *            The location to begin the paste.
+	 */
+	public boolean loadSchematic(String name, Player p, Location pasteLocation);
 }

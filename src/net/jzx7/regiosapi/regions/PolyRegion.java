@@ -8,6 +8,8 @@ public interface PolyRegion extends Region {
 	
 	public Polygon get2DPolygon();
 	
+	public void set2DPolygon(Polygon polygon);
+	
 	public double getMinY();
 	
 	public double getMaxY();
