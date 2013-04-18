@@ -1,17 +1,13 @@
 package net.jzx7.regiosapi.regions;
 
-import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import net.jzx7.regiosapi.block.RegiosBiome;
 import net.jzx7.regiosapi.data.MODE;
-import org.bukkit.GameMode;
-import org.bukkit.Location;
-import org.bukkit.Material;
-import org.bukkit.World;
-import org.bukkit.block.Biome;
-import org.bukkit.entity.Player;
-import org.bukkit.inventory.PlayerInventory;
+import net.jzx7.regiosapi.entity.RegiosPlayer;
+import net.jzx7.regiosapi.location.RegiosPoint;
+import net.jzx7.regiosapi.worlds.RegiosWorld;
 
 public interface Region {
 
@@ -21,7 +17,7 @@ public interface Region {
 
 	public void addItemException(int id);
 
-	public void addPlayer(Player p);
+	public void addPlayer(RegiosPlayer p);
 
 	public boolean areChestsLocked();
 
@@ -29,49 +25,37 @@ public interface Region {
 
 	public boolean areDoorsLocked();
 
-	public boolean canBuild(Player p);
+	public boolean canBuild(RegiosPlayer p);
 
-	public boolean canBypassProtection(Player p);
+	public boolean canBypassProtection(RegiosPlayer p);
 
-	public boolean canEnter(Player p);
+	public boolean canEnter(RegiosPlayer p);
 
-	public boolean canExit(Player p);
+	public boolean canExit(RegiosPlayer p);
 
 	public boolean canMobsSpawn();
 
-	public boolean canModify(Player p);
+	public boolean canModify(RegiosPlayer p);
 
 	public boolean canMonstersSpawn();
 
-	public boolean canPlaceItem(Player p, Material m);
+	public boolean canPlaceItem(RegiosPlayer p, int m);
 
 	public HashMap<String, Boolean> getAuthentication();
 
-	public boolean getAuthentication(String password, Player p);
-
-	public File getBackupsDirectory();
+	public boolean getAuthentication(String password, RegiosPlayer p);
 
 	public String[] getCommandSet();
 
-	public File getConfigFile();
-
 	public String[] getCustomSoundUrl();
-
-	public File getDirectory();
-
-	public File getExceptionDirectory();
 
 	public ArrayList<String> getExceptionNodes();
 
 	public ArrayList<String> getExceptions();
 
-	public GameMode getGameMode();
+	public int getGameMode();
 
 	public int getHealthRegen();
-
-	public HashMap<String, PlayerInventory> getInventoryCache();
-
-	public PlayerInventory getInventoryCache(Player p);
 
 	public MODE getItemMode();
 
@@ -80,8 +64,6 @@ public interface Region {
 	public String getLeaveMessage();
 
 	public HashMap<String, Boolean> getLeaveMessageSent();
-
-	public File getLogFile();
 
 	public int getLSPS();
 
@@ -117,17 +99,15 @@ public interface Region {
 
 	public MODE getProtectionMode();
 
-	public File getRawConfigFile();
-
 	public int getSalePrice();
 
-	public Material getSpoutLeaveMaterial();
+	public int getSpoutLeaveMaterial();
 
 	public String getSpoutLeaveMessage();
 
 	public String getSpoutTexturePack();
 
-	public Material getSpoutWelcomeMaterial();
+	public int getSpoutWelcomeMaterial();
 
 	public String getSpoutWelcomeMessage();
 
@@ -141,25 +121,25 @@ public interface Region {
 
 	public String[] getTempRemoveGroups();
 
-	public long getTimestamp(Player p);
+	public long getTimestamp(RegiosPlayer p);
 
 	public HashMap<String, Long> getTimeStamps();
 
 	public double getVelocityWarp();
 
-	public Location getWarp();
+	public RegiosPoint getWarp();
 
 	public String getWelcomeMessage();
 
 	public HashMap<String, Boolean> getWelcomeMessageSent();
 
-	public World getWorld();
+	public RegiosWorld getWorld();
 
 	public boolean is_protectionBreak();
 
 	public boolean is_protectionPlace();
 
-	public boolean isAuthenticated(Player p);
+	public boolean isAuthenticated(RegiosPlayer p);
 
 	public boolean isBlockEndermanMod();
 
@@ -179,7 +159,7 @@ public interface Region {
 
 	public boolean isHealthEnabled();
 
-	public boolean isLeaveMessageSent(Player p);
+	public boolean isLeaveMessageSent(RegiosPlayer p);
 
 	public boolean isPasswordEnabled();
 
@@ -189,7 +169,7 @@ public interface Region {
 
 	public boolean isPlayCustomSoundUrl();
 
-	public boolean isPlayerInRegion(Player p);
+	public boolean isPlayerInRegion(RegiosPlayer p);
 
 	public boolean isPreventEntry();
 
@@ -201,7 +181,7 @@ public interface Region {
 
 	public boolean isPvp();
 
-	public boolean isRegionFull(Player p);
+	public boolean isRegionFull(RegiosPlayer p);
 
 	public boolean isShowLeaveMessage();
 
@@ -221,7 +201,7 @@ public interface Region {
 	
 	public boolean isUseSpoutTexturePack();
 
-	public boolean isWelcomeMessageSent(Player p);
+	public boolean isWelcomeMessageSent(RegiosPlayer p);
 
 	public boolean isWipeAndCacheOnEnter();
 
@@ -233,9 +213,9 @@ public interface Region {
 
 	public void removeItemException(int id);
 
-	public void removePlayer(Player p);
+	public void removePlayer(RegiosPlayer p);
 
-	public void resetAuthentication(Player p);
+	public void resetAuthentication(RegiosPlayer p);
 
 	public void set_protection(boolean _protection);
 
@@ -245,7 +225,7 @@ public interface Region {
 
 	public void setAuthentication(HashMap<String, Boolean> authentication);
 
-	public void setBiome(Biome biome, Player p);
+	public void setBiome(RegiosBiome biome, RegiosPlayer p);
 
 	public void setBlockEndermanMod(boolean val);
 
@@ -275,13 +255,11 @@ public interface Region {
 
 	public void setForSale(boolean forSale);
 
-	public void setGameMode(GameMode gm);
+	public void setGameMode(int gm);
 
 	public void setHealthEnabled(boolean healthEnabled);
 
 	public void setHealthRegen(int healthRegen);
-
-	public void setInventoryCache(HashMap<String, PlayerInventory> inventoryCache);
 
 	public void setItemMode(MODE itemMode);
 
@@ -359,11 +337,11 @@ public interface Region {
 
 	public void setShowWelcomeMessage(boolean showWelcomeMessage);
 
-	public void setSpoutEntryMaterial(Material spoutEntryMaterial);
+	public void setSpoutEntryMaterial(int spoutEntryMaterial);
 
 	public void setSpoutEntryMessage(String spoutEntryMessage);
 
-	public void setSpoutExitMaterial(Material spoutExitMaterial);
+	public void setSpoutExitMaterial(int spoutLeaveMaterial);
 
 	public void setSpoutExitMessage(String spoutExitMessage);
 
@@ -383,7 +361,7 @@ public interface Region {
 	
 	public void setTempRemoveGroups(String[] val);
 
-	public void setTimestamp(Player p);
+	public void setTimestamp(RegiosPlayer p);
 
 	public void setTimeStamps(HashMap<String, Long> timeStamps);
 
@@ -391,7 +369,7 @@ public interface Region {
 
 	public void setVelocityWarp(double velocityWarp);
 
-	public void setWarp(Location warp);
+	public void setWarp(RegiosPoint warp);
 
 	public void setWelcomeMessage(String welcomeMessage);
 
@@ -401,6 +379,6 @@ public interface Region {
 
 	public void setWipeAndCacheOnExit(boolean wipeAndCacheOnExit);
 
-	public void setWorld(World world);
+	public void setWorld(RegiosWorld world);
 	
 }

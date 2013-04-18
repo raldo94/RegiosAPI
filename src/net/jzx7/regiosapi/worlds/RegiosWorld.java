@@ -1,12 +1,27 @@
 package net.jzx7.regiosapi.worlds;
 
-import org.bukkit.World;
-import org.bukkit.entity.EntityType;
-import org.bukkit.entity.Player;
+import net.jzx7.regiosapi.block.RegiosBiome;
+import net.jzx7.regiosapi.block.RegiosBlock;
+import net.jzx7.regiosapi.entity.RegiosPlayer;
+import net.jzx7.regiosapi.location.RegiosPoint;
 
 public interface RegiosWorld {
-
-	public World getWorld();
+	
+	public String getName();
+	
+	public boolean refreshChunk(int x, int y);
+	
+	public void setBiome(int x, int y, RegiosBiome biome);
+	
+	public int getMaxHeight();
+	
+	public void strikeLightning(RegiosPoint l);
+	
+	public RegiosBlock getBlockAt(int x, int y, int z);
+	
+	public RegiosBlock getBlockAt(RegiosPoint l);
+	
+	//Regios methods from here on out ----------------
 	
 	public boolean getProtection();
 
@@ -56,9 +71,9 @@ public interface RegiosWorld {
 	
 	public void setEnderDragonCreatesPortal(boolean val);
 
-	public boolean canCreatureSpawn(EntityType entityType);
+	public boolean canCreatureSpawn(int entityType);
 
-	public void addCreatureSpawn(EntityType ct);
+	public void addCreatureSpawn(int ct);
 	
-	public boolean canBypassWorldChecks(Player p);
+	public boolean canBypassWorldChecks(RegiosPlayer p);
 }
