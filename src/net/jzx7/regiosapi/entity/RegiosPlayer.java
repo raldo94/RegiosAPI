@@ -22,11 +22,11 @@ public interface RegiosPlayer {
 	
 	public boolean hasPermission(String node);
 	
-	public int getHealth();
+	public double getHealth();
 	
-	public void setHealth(int h);
+	public void setHealth(double h);
 	
-	public void damage(int damage);
+	public void damage(double d);
 	
 	public int getGameMode();
 	
