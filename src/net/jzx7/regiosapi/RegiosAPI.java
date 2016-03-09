@@ -21,14 +21,14 @@ public interface RegiosAPI {
 	 * 
 	 * @return version number
 	 */
-	public String getRegiosVersion();
+	String getRegiosVersion();
 
 	/**
 	 * Get a list of all the Regions.
 	 * 
 	 * @return List of Regions.
 	 */
-	public ArrayList<Region> getRegions();
+	ArrayList<Region> getRegions();
 
 	/**
 	 * Get a list of all the Regions in specified world.
@@ -36,7 +36,7 @@ public interface RegiosAPI {
 	 * @param w World
 	 * @return List of Regions.
 	 */
-	public ArrayList<Region> getRegions(World w);
+	ArrayList<Region> getRegions(World w);
 
 	/**
 	 * Get a list of all the Regions in specified location.
@@ -44,7 +44,7 @@ public interface RegiosAPI {
 	 * @param l Location
 	 * @return List of Regions.
 	 */
-	public ArrayList<Region> getRegions(Location l);
+	ArrayList<Region> getRegions(Location l);
 
 	/**
 	 * Get the region a player is in.
@@ -53,7 +53,7 @@ public interface RegiosAPI {
 	 * @return Returns the region that the specified player is in. Will return
 	 *         null if the player is not in a region.
 	 */
-	public Region getRegion(Player p);
+	Region getRegion(Player p);
 
 	/**
 	 * Get the region a location is in.
@@ -62,7 +62,7 @@ public interface RegiosAPI {
 	 * @return Returns the region that the specified location is in. Will return
 	 *         null if the location is not in a region.
 	 */
-	public Region getRegion(Location l);
+	Region getRegion(Location l);
 
 	/**
 	 * Get a region by it's name.
@@ -71,7 +71,7 @@ public interface RegiosAPI {
 	 * @return Returns the Region object with the corresponding name. Will
 	 *         return null if no region with that name exists.
 	 */
-	public Region getRegion(String name);
+	Region getRegion(String name);
 
 	/**
 	 * Get the number of owned regions for a player
@@ -79,7 +79,7 @@ public interface RegiosAPI {
 	 * @param name String
 	 * @return
 	 */
-	public int getOwnedRegions(String name);
+	int getOwnedRegions(String name);
 
 	/**
 	 * Check whether a player is in a region.
@@ -87,7 +87,7 @@ public interface RegiosAPI {
 	 * @param p Player.
 	 * @return Whether the player is in a region or not.
 	 */
-	public boolean isInRegion(Player p);
+	boolean isInRegion(Player p);
 
 	/**
 	 * Check whether a location is in a region.
@@ -95,14 +95,14 @@ public interface RegiosAPI {
 	 * @param l Location.
 	 * @return Whether the location is in a region or not.
 	 */
-	public boolean isInRegion(Location l);
+	boolean isInRegion(Location l);
 
 	/**
 	 * Get collection of all the RegiosWorlds
 	 * 
 	 * @return Collection of RegiosWorlds
 	 **/
-	public Collection<RegiosWorld> getRegiosWorlds();
+	Collection<RegiosWorld> getRegiosWorlds();
 
 	/**
 	 * Gets the RegiosWorld from the World
@@ -110,7 +110,7 @@ public interface RegiosAPI {
 	 * @param world World
 	 * @return RegiosWorld
 	 */
-	public RegiosWorld getRegiosWorld(World world);
+	RegiosWorld getRegiosWorld(World world);
 
 	/**
 	 * Get the RegiosWorld from the world UUID
@@ -118,7 +118,7 @@ public interface RegiosAPI {
 	 * @param id UUID
 	 * @return RegiosWorld
 	 */
-	public RegiosWorld getRegiosWorld(UUID id);
+	RegiosWorld getRegiosWorld(UUID id);
 
 	/**
 	 * Check if the player is using Spoutcraft.
@@ -127,14 +127,14 @@ public interface RegiosAPI {
 	 *            Player
 	 * @return Whether the player is running the Spoutcraft launcher.
 	 */
-	public boolean isSpoutEnabled(Player p);
+	boolean isSpoutEnabled(Player p);
 
 	/**
 	 * Check if Spout is installed on the server.
 	 * 
 	 * @return Whether Regios is running with Spout support.
 	 */
-	public boolean isSpoutEnabled();
+	boolean isSpoutEnabled();
 
 	/**
 	 * Create a backup of a Region with the specified Name.
@@ -144,7 +144,7 @@ public interface RegiosAPI {
 	 * @param backupName
 	 *            Backup name.
 	 */
-	public void backupRegion(Region r, String backupName, Player p);
+	void backupRegion(Region r, String backupName, Player p);
 
 	/**
 	 * Restore a Region to its previous state when backed up.
@@ -159,7 +159,7 @@ public interface RegiosAPI {
 	 * @throws FileExistanceException
 	 * @throws InvalidNBTFormatException
 	 */
-	public boolean loadBackup(Region r, String backupName, Player p) throws RegionExistanceException, FileExistanceException, InvalidNBTFormat;
+	boolean loadBackup(Region r, String backupName, Player p) throws RegionExistanceException, FileExistanceException, InvalidNBTFormat;
 
 	/**
 	 * Create a blueprint file.
@@ -173,7 +173,7 @@ public interface RegiosAPI {
 	 * @param p
 	 *            Player
 	 */
-	public void saveBlueprint(String name, Location l1, Location l2, Player p);
+	void saveBlueprint(String name, Location l1, Location l2, Player p);
 
 	/**
 	 * Loads a blueprint.
@@ -185,7 +185,7 @@ public interface RegiosAPI {
 	 * @param pasteLocation
 	 *            The location to begin the paste.
 	 */
-	public boolean loadBlueprint(String name, Player p, Location pasteLocation);
+	boolean loadBlueprint(String name, Player p, Location pasteLocation);
 	
 	/**
 	 * Create a blueprint file.
@@ -199,7 +199,7 @@ public interface RegiosAPI {
 	 * @param p
 	 *            Player
 	 */
-	public void saveSchematic(String name, Location l1, Location l2, Player p);
+	void saveSchematic(String name, Location l1, Location l2, Player p);
 
 	/**
 	 * Loads a blueprint.
@@ -211,5 +211,5 @@ public interface RegiosAPI {
 	 * @param pasteLocation
 	 *            The location to begin the paste.
 	 */
-	public boolean loadSchematic(String name, Player p, Location pasteLocation);
+	boolean loadSchematic(String name, Player p, Location pasteLocation);
 }

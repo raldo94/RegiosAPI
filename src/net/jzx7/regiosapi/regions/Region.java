@@ -11,374 +11,374 @@ import net.jzx7.regiosapi.worlds.RegiosWorld;
 
 public interface Region {
 
-	public void addException(String exception);
+	void addException(String exception);
 	
-	public void addExceptionNode(String node);
+	void addExceptionNode(String node);
 
-	public void addItemException(int id);
+	void addItemException(int id);
 
-	public void addPlayer(RegiosPlayer p);
+	void addPlayer(RegiosPlayer p);
 
-	public boolean areChestsLocked();
+	boolean areChestsLocked();
 
-	public boolean areDispensersLocked();
+	boolean areDispensersLocked();
 
-	public boolean areDoorsLocked();
+	boolean areDoorsLocked();
 
-	public boolean canBuild(RegiosPlayer p);
+	boolean canBuild(RegiosPlayer p);
 
-	public boolean canBypassProtection(RegiosPlayer p);
+	boolean canBypassProtection(RegiosPlayer p);
 
-	public boolean canEnter(RegiosPlayer p);
+	boolean canEnter(RegiosPlayer p);
 
-	public boolean canExit(RegiosPlayer p);
+	boolean canExit(RegiosPlayer p);
 
-	public boolean canMobsSpawn();
+	boolean canMobsSpawn();
 
-	public boolean canModify(RegiosPlayer p);
+	boolean canModify(RegiosPlayer p);
 
-	public boolean canMonstersSpawn();
+	boolean canMonstersSpawn();
 
-	public boolean canPlaceItem(RegiosPlayer p, int m);
+	boolean canPlaceItem(RegiosPlayer p, int m);
 
-	public HashMap<String, Boolean> getAuthentication();
+	HashMap<String, Boolean> getAuthentication();
 
-	public boolean getAuthentication(String password, RegiosPlayer p);
+	boolean getAuthentication(String password, RegiosPlayer p);
 
-	public String[] getCommandSet();
+	String[] getCommandSet();
 
-	public String[] getCustomSoundUrl();
+	String[] getCustomSoundUrl();
 
-	public ArrayList<String> getExceptionNodes();
+	ArrayList<String> getExceptionNodes();
 
-	public ArrayList<String> getExceptions();
+	ArrayList<String> getExceptions();
 
-	public int getGameMode();
+	int getGameMode();
 
-	public int getHealthRegen();
+	int getHealthRegen();
 
-	public MODE getItemMode();
+	MODE getItemMode();
 
-	public ArrayList<Integer> getItems();
+	ArrayList<Integer> getItems();
 
-	public String getLeaveMessage();
+	String getLeaveMessage();
 
-	public HashMap<String, Boolean> getLeaveMessageSent();
+	HashMap<String, Boolean> getLeaveMessageSent();
 
-	public int getLSPS();
+	int getLSPS();
 
-	public String getName();
+	String getName();
 
-	public ArrayList<String> getNodes();
+	ArrayList<String> getNodes();
 
-	public String getOwner();
+	String getOwner();
 
-	public String getPassword();
+	String getPassword();
 
-	public String[] getPermAddGroups();
+	String[] getPermAddGroups();
 
-	public String[] getPermAddNodes();
+	String[] getPermAddNodes();
 
-	public String[] getPermRemoveGroups();
+	String[] getPermRemoveGroups();
 
-	public String[] getPermRemoveNodes();
+	String[] getPermRemoveNodes();
 
-	public int getPlayerCap();
+	int getPlayerCap();
 
-	public ArrayList<String> getPlayersInRegion();
+	ArrayList<String> getPlayersInRegion();
 
-	public String getPreventEntryMessage();
+	String getPreventEntryMessage();
 
-	public MODE getPreventEntryMode();
+	MODE getPreventEntryMode();
 
-	public String getPreventExitMessage();
+	String getPreventExitMessage();
 
-	public MODE getPreventExitMode();
+	MODE getPreventExitMode();
 
-	public String getProtectionMessage();
+	String getProtectionMessage();
 
-	public MODE getProtectionMode();
+	MODE getProtectionMode();
 
-	public int getSalePrice();
+	int getSalePrice();
 
-	public int getSpoutLeaveMaterial();
+	int getSpoutLeaveMaterial();
 
-	public String getSpoutLeaveMessage();
+	String getSpoutLeaveMessage();
 
-	public String getSpoutTexturePack();
+	String getSpoutTexturePack();
 
-	public int getSpoutWelcomeMaterial();
+	int getSpoutWelcomeMaterial();
 
-	public String getSpoutWelcomeMessage();
+	String getSpoutWelcomeMessage();
 
-	public String[] getSubOwners();
+	String[] getSubOwners();
 
-	public String[] getTempAddGroups();
+	String[] getTempAddGroups();
 
-	public String[] getTempNodesCacheAdd();
+	String[] getTempNodesCacheAdd();
 
-	public String[] getTempNodesCacheRem();
+	String[] getTempNodesCacheRem();
 
-	public String[] getTempRemoveGroups();
+	String[] getTempRemoveGroups();
 
-	public long getTimestamp(RegiosPlayer p);
+	long getTimestamp(RegiosPlayer p);
 
-	public HashMap<String, Long> getTimeStamps();
+	HashMap<String, Long> getTimeStamps();
 
-	public double getVelocityWarp();
+	double getVelocityWarp();
 
-	public RegiosPoint getWarp();
+	RegiosPoint getWarp();
 
-	public String getWelcomeMessage();
+	String getWelcomeMessage();
 
-	public HashMap<String, Boolean> getWelcomeMessageSent();
+	HashMap<String, Boolean> getWelcomeMessageSent();
 
-	public RegiosWorld getWorld();
+	RegiosWorld getWorld();
 
-	public boolean is_protectionBreak();
+	boolean is_protectionBreak();
 
-	public boolean is_protectionPlace();
+	boolean is_protectionPlace();
 
-	public boolean isAuthenticated(RegiosPlayer p);
+	boolean isAuthenticated(RegiosPlayer p);
 
-	public boolean isBlockEndermanMod();
+	boolean isBlockEndermanMod();
 
-	public boolean isBlockForm();
+	boolean isBlockForm();
 
-	public boolean isChangeGameMode();
+	boolean isChangeGameMode();
 
-	public boolean isExplosionsEnabled();
+	boolean isExplosionsEnabled();
 
-	public boolean isFireProtection();
+	boolean isFireProtection();
 
-	public boolean isFireSpread();
+	boolean isFireSpread();
 
-	public boolean isForceCommand();
+	boolean isForceCommand();
 
-	public boolean isForSale();
+	boolean isForSale();
 
-	public boolean isHealthEnabled();
+	boolean isHealthEnabled();
 
-	public boolean isLeaveMessageSent(RegiosPlayer p);
+	boolean isLeaveMessageSent(RegiosPlayer p);
 
-	public boolean isPasswordEnabled();
+	boolean isPasswordEnabled();
 
-	public boolean isPermWipeOnEnter();
+	boolean isPermWipeOnEnter();
 
-	public boolean isPermWipeOnExit();
+	boolean isPermWipeOnExit();
 
-	public boolean isPlayCustomSoundUrl();
+	boolean isPlayCustomSoundUrl();
 
-	public boolean isPlayerInRegion(RegiosPlayer p);
+	boolean isPlayerInRegion(RegiosPlayer p);
 
-	public boolean isPreventEntry();
+	boolean isPreventEntry();
 
-	public boolean isPreventExit();
+	boolean isPreventExit();
 
-	public boolean isPreventInteraction();
+	boolean isPreventInteraction();
 
-	public boolean isProtected();
+	boolean isProtected();
 
-	public boolean isPvp();
+	boolean isPvp();
 
-	public boolean isRegionFull(RegiosPlayer p);
+	boolean isRegionFull(RegiosPlayer p);
 
-	public boolean isShowLeaveMessage();
+	boolean isShowLeaveMessage();
 
-	public boolean isShowPreventEntryMessage();
+	boolean isShowPreventEntryMessage();
 
-	public boolean isShowPreventExitMessage();
+	boolean isShowPreventExitMessage();
 
-	public boolean isShowProtectionMessage();
+	boolean isShowProtectionMessage();
 
-	public boolean isShowPvpWarning();
+	boolean isShowPvpWarning();
 
-	public boolean isShowWelcomeMessage();
+	boolean isShowWelcomeMessage();
 
-	public boolean isSpoutLeaveEnabled();
+	boolean isSpoutLeaveEnabled();
 
-	public boolean isSpoutWelcomeEnabled();
+	boolean isSpoutWelcomeEnabled();
 	
-	public boolean isUseSpoutTexturePack();
+	boolean isUseSpoutTexturePack();
 
-	public boolean isWelcomeMessageSent(RegiosPlayer p);
+	boolean isWelcomeMessageSent(RegiosPlayer p);
 
-	public boolean isWipeAndCacheOnEnter();
+	boolean isWipeAndCacheOnEnter();
 
-	public boolean isWipeAndCacheOnExit();
+	boolean isWipeAndCacheOnExit();
 
-	public void removeException(String exception);
+	void removeException(String exception);
 	
-	public void removeExceptionNode(String node);
+	void removeExceptionNode(String node);
 
-	public void removeItemException(int id);
+	void removeItemException(int id);
 
-	public void removePlayer(RegiosPlayer p);
+	void removePlayer(RegiosPlayer p);
 
-	public void resetAuthentication(RegiosPlayer p);
+	void resetAuthentication(RegiosPlayer p);
 
-	public void set_protection(boolean _protection);
+	void set_protection(boolean _protection);
 
-	public void set_protectionBreak(boolean _protectionBreak);
+	void set_protectionBreak(boolean _protectionBreak);
 
-	public void set_protectionPlace(boolean _protectionPlace);
+	void set_protectionPlace(boolean _protectionPlace);
 
-	public void setAuthentication(HashMap<String, Boolean> authentication);
+	void setAuthentication(HashMap<String, Boolean> authentication);
 
-	public void setBiome(RegiosBiome biome, RegiosPlayer p);
+	void setBiome(RegiosBiome biome, RegiosPlayer p);
 
-	public void setBlockEndermanMod(boolean val);
+	void setBlockEndermanMod(boolean val);
 
-	public void setBlockForm(boolean blockForm);
+	void setBlockForm(boolean blockForm);
 
-	public void setChangeGameMode(boolean val);
+	void setChangeGameMode(boolean val);
 
-	public void setChestsLocked(boolean chestsLocked);
+	void setChestsLocked(boolean chestsLocked);
 
-	public void setCommandSet(String[] commandSet);
+	void setCommandSet(String[] commandSet);
 
-	public void setCustomSoundUrl(String[] customSoundUrl);
+	void setCustomSoundUrl(String[] customSoundUrl);
 
-	public void setDispensersLocked(boolean dispensersLocked);
+	void setDispensersLocked(boolean dispensersLocked);
 
-	public void setDoorsLocked(boolean doorsLocked);
+	void setDoorsLocked(boolean doorsLocked);
 
-	public void setExceptions(ArrayList<String> exceptions);
+	void setExceptions(ArrayList<String> exceptions);
 
-	public void setExplosionsEnabled(boolean explosionsEnabled);
+	void setExplosionsEnabled(boolean explosionsEnabled);
 
-	public void setFireProtection(boolean fireProtection);
+	void setFireProtection(boolean fireProtection);
 
-	public void setFireSpread(boolean fireSpread);
+	void setFireSpread(boolean fireSpread);
 
-	public void setForceCommand(boolean forceCommand);
+	void setForceCommand(boolean forceCommand);
 
-	public void setForSale(boolean forSale);
+	void setForSale(boolean forSale);
 
-	public void setGameMode(int gm);
+	void setGameMode(int gm);
 
-	public void setHealthEnabled(boolean healthEnabled);
+	void setHealthEnabled(boolean healthEnabled);
 
-	public void setHealthRegen(int healthRegen);
+	void setHealthRegen(int healthRegen);
 
-	public void setItemMode(MODE itemMode);
+	void setItemMode(MODE itemMode);
 
-	public void setItems(ArrayList<Integer> items);
+	void setItems(ArrayList<Integer> items);
 
-	public void setLeaveMessage(String leaveMessage);
+	void setLeaveMessage(String leaveMessage);
 
-	public void setLeaveMessageSent(HashMap<String, Boolean> leaveMessageSent);
+	void setLeaveMessageSent(HashMap<String, Boolean> leaveMessageSent);
 
-	public void setLSPS(int lSPS);
+	void setLSPS(int lSPS);
 
-	public void setMobSpawns(boolean mobSpawns);
+	void setMobSpawns(boolean mobSpawns);
 
-	public void setMonsterSpawns(boolean monsterSpawns);
+	void setMonsterSpawns(boolean monsterSpawns);
 
-	public void setName(String name);
+	void setName(String name);
 
-	public void setNodes(ArrayList<String> nodes);
+	void setNodes(ArrayList<String> nodes);
 
-	public void setOwner(String owner);
+	void setOwner(String owner);
 
-	public void setPassword(String password);
+	void setPassword(String password);
 
-	public void setPasswordEnabled(boolean passwordEnabled);
+	void setPasswordEnabled(boolean passwordEnabled);
 
-	public void setPermAddGroups(String[] val);
+	void setPermAddGroups(String[] val);
 
-	public void setPermanentNodesCacheAdd(String[] permanentNodesCacheAdd);
+	void setPermanentNodesCacheAdd(String[] permanentNodesCacheAdd);
 
-	public void setPermanentNodesCacheRemove(String[] permanentNodesCacheRemove);
+	void setPermanentNodesCacheRemove(String[] permanentNodesCacheRemove);
 
-	public void setPermRemoveGroups(String[] val);
+	void setPermRemoveGroups(String[] val);
 
-	public void setPermWipeOnEnter(boolean permWipeOnEnter);
+	void setPermWipeOnEnter(boolean permWipeOnEnter);
 
-	public void setPermWipeOnExit(boolean permWipeOnExit);
+	void setPermWipeOnExit(boolean permWipeOnExit);
 
-	public void setPlayCustomSoundUrl(boolean playCustomSoundUrl);
+	void setPlayCustomSoundUrl(boolean playCustomSoundUrl);
 
-	public void setPlayerCap(int playerCap);
+	void setPlayerCap(int playerCap);
 
-	public void setPlayersInRegion(ArrayList<String> playersInRegion);
+	void setPlayersInRegion(ArrayList<String> playersInRegion);
 
-	public void setPreventEntry(boolean preventEntry);
+	void setPreventEntry(boolean preventEntry);
 
-	public void setPreventEntryMessage(String preventEntryMessage);
+	void setPreventEntryMessage(String preventEntryMessage);
 
-	public void setPreventEntryMode(MODE preventEntryMode);
+	void setPreventEntryMode(MODE preventEntryMode);
 
-	public void setPreventExit(boolean preventExit);
+	void setPreventExit(boolean preventExit);
 
-	public void setPreventExitMessage(String preventExitMessage);
+	void setPreventExitMessage(String preventExitMessage);
 
-	public void setPreventExitMode(MODE preventExitMode);
+	void setPreventExitMode(MODE preventExitMode);
 
-	public void setPreventInteraction(boolean preventInteraction);
+	void setPreventInteraction(boolean preventInteraction);
 
-	public void setProtectionMessage(String protectionMessage);
+	void setProtectionMessage(String protectionMessage);
 
-	public void setProtectionMode(MODE protectionMode);
+	void setProtectionMode(MODE protectionMode);
 
-	public void setPvp(boolean pvp);
+	void setPvp(boolean pvp);
 
-	public void setSalePrice(int salePrice);
+	void setSalePrice(int salePrice);
 
-	public void setShowLeaveMessage(boolean showLeaveMessage);
+	void setShowLeaveMessage(boolean showLeaveMessage);
 
-	public void setShowPreventEntryMessage(boolean showPreventEntryMessage);
+	void setShowPreventEntryMessage(boolean showPreventEntryMessage);
 
-	public void setShowPreventExitMessage(boolean showPreventExitMessage);
+	void setShowPreventExitMessage(boolean showPreventExitMessage);
 
-	public void setShowProtectionMessage(boolean showProtectionMessage);
+	void setShowProtectionMessage(boolean showProtectionMessage);
 
-	public void setShowPvpWarning(boolean showPvpWarning);
+	void setShowPvpWarning(boolean showPvpWarning);
 
-	public void setShowWelcomeMessage(boolean showWelcomeMessage);
+	void setShowWelcomeMessage(boolean showWelcomeMessage);
 
-	public void setSpoutEntryMaterial(int spoutEntryMaterial);
+	void setSpoutEntryMaterial(int spoutEntryMaterial);
 
-	public void setSpoutEntryMessage(String spoutEntryMessage);
+	void setSpoutEntryMessage(String spoutEntryMessage);
 
-	public void setSpoutExitMaterial(int spoutLeaveMaterial);
+	void setSpoutExitMaterial(int spoutLeaveMaterial);
 
-	public void setSpoutExitMessage(String spoutExitMessage);
+	void setSpoutExitMessage(String spoutExitMessage);
 
-	public void setSpoutLeaveEnabled(boolean spoutLeaveEnabled);
+	void setSpoutLeaveEnabled(boolean spoutLeaveEnabled);
 
-	public void setSpoutTexturePack(String spoutTexturePack);
+	void setSpoutTexturePack(String spoutTexturePack);
 
-	public void setSpoutWelcomeEnabled(boolean spoutWelcomeEnabled);
+	void setSpoutWelcomeEnabled(boolean spoutWelcomeEnabled);
 
-	public void setSubOwners(String[] subOwners);
+	void setSubOwners(String[] subOwners);
 
-	public void setTempAddGroups(String[] val);
+	void setTempAddGroups(String[] val);
 
-	public void setTempNodesCacheAdd(String[] temporaryNodesCacheAdd);
+	void setTempNodesCacheAdd(String[] temporaryNodesCacheAdd);
 	
-	public void setTempNodesCacheRem(String[] temporaryNodesCacheRem);
+	void setTempNodesCacheRem(String[] temporaryNodesCacheRem);
 	
-	public void setTempRemoveGroups(String[] val);
+	void setTempRemoveGroups(String[] val);
 
-	public void setTimestamp(RegiosPlayer p);
+	void setTimestamp(RegiosPlayer p);
 
-	public void setTimeStamps(HashMap<String, Long> timeStamps);
+	void setTimeStamps(HashMap<String, Long> timeStamps);
 
-	public void setUseSpoutTexturePack(boolean useSpoutTexturePack);
+	void setUseSpoutTexturePack(boolean useSpoutTexturePack);
 
-	public void setVelocityWarp(double velocityWarp);
+	void setVelocityWarp(double velocityWarp);
 
-	public void setWarp(RegiosPoint warp);
+	void setWarp(RegiosPoint warp);
 
-	public void setWelcomeMessage(String welcomeMessage);
+	void setWelcomeMessage(String welcomeMessage);
 
-	public void setWelcomeMessageSent(HashMap<String, Boolean> welcomeMessageSent);
+	void setWelcomeMessageSent(HashMap<String, Boolean> welcomeMessageSent);
 
-	public void setWipeAndCacheOnEnter(boolean wipeAndCacheOnEnter);
+	void setWipeAndCacheOnEnter(boolean wipeAndCacheOnEnter);
 
-	public void setWipeAndCacheOnExit(boolean wipeAndCacheOnExit);
+	void setWipeAndCacheOnExit(boolean wipeAndCacheOnExit);
 
-	public void setWorld(RegiosWorld world);
+	void setWorld(RegiosWorld world);
 	
 }

@@ -5,16 +5,16 @@ import net.jzx7.regiosapi.worlds.RegiosWorld;
 
 public interface CuboidRegion extends Region {
 	
-	public RegiosPoint getL1();
+	RegiosPoint getL1();
 
-	public RegiosPoint getL2();
+	RegiosPoint getL2();
 	
-	public void setL1(RegiosPoint l1);
+	void setL1(RegiosPoint l1);
 
-	public void setL1(RegiosWorld w, float x, float y, float z);
+	void setL1(RegiosWorld w, float x, float y, float z);
 
-	public void setL2(RegiosPoint l2);
+	void setL2(RegiosPoint l2);
 
-	public void setL2(RegiosWorld w, float x, float y, float z);
+	void setL2(RegiosWorld w, float x, float y, float z);
 	
 }

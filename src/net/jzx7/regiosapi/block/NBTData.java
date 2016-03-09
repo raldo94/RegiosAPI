@@ -5,9 +5,9 @@ import net.jzx7.regiosapi.exceptions.InvalidNBTData;
 
 public interface NBTData {
 	
-	public String getNBTID();
+	String getNBTID();
 	
-	public CompoundTag getNBTData();
+	CompoundTag getNBTData();
 
     void setNBTData(CompoundTag nbtData) throws InvalidNBTData;
 }
