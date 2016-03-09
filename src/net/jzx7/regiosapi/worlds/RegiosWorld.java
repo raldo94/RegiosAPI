@@ -4,6 +4,7 @@ import net.jzx7.regiosapi.block.RegiosBiome;
 import net.jzx7.regiosapi.block.RegiosBlock;
 import net.jzx7.regiosapi.entity.RegiosPlayer;
 import net.jzx7.regiosapi.location.RegiosPoint;
+import org.bukkit.entity.EntityType;
 
 public interface RegiosWorld {
 	
@@ -70,6 +71,8 @@ public interface RegiosWorld {
 	public boolean getEnderDragonCreatesPortal();
 	
 	public void setEnderDragonCreatesPortal(boolean val);
+
+	public boolean canCreatureSpawn(EntityType type);
 
 	public boolean canCreatureSpawn(int entityType);
 
